@@ -11401,4 +11401,19 @@ section.resume-section .resume-section-content {
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
+
+  .small-portrait {
+    display: none !important;
+  }
+}
+
+.small-portrait {
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: auto auto 1rem;
+}
+
+.img-profile-2 {
+  border: 0.5rem solid rgb(73, 80, 87);
 }
