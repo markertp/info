@@ -11417,3 +11417,14 @@ section.resume-section .resume-section-content {
 .img-profile-2 {
   border: 0.5rem solid rgb(73, 80, 87);
 }
+
+.privacy {
+  font-size: 10px;
+}
+
+@media (min-width: 992px) {
+  .privacy {
+    position: absolute;
+    bottom: 5px;
+    left: 22.5%;
+}
