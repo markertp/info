@@ -2,10 +2,29 @@
 <html>
 <head>
     <title>My LinkedIn Profile</title>
+    <link rel="stylesheet" href="css/fontawesome.min.css">
     <style>
+        .linkedin-button {
+            background-color: #0077B5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .linkedin-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
         .social-icon {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             vertical-align: middle;
         }
     </style>
@@ -27,11 +46,9 @@
         // Execute the function directly when the page loads
         openLinkedInProfile();
     </script>
-
     <p>If you have the LinkedIn app installed, it should open automatically.</p>
     <p>If not, you can use the button below:</p>
-    <button onclick="window.location.href = 'https://www.linkedin.com/in/philipp-markert'">
-        <img src="path-to-linkedin-logo.png" alt="LinkedIn Logo" class="social-icon"> Open LinkedIn Profile
+    <button class="linkedin-button" onclick="window.location.href = 'https://www.linkedin.com/in/philipp-markert'"><i class="fab fa-linkedin-in"></i> Open LinkedIn Profile
     </button>
 </body>
 </html>
