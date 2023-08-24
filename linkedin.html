@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LinkedIn Profile</title>
+    <script>
+        window.onload = function() {
+            openLinkedInProfile();
+        };
+        function openLinkedInProfile() {
+            // Prüfen, ob auf dem Gerät die LinkedIn-App installiert ist
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                window.location.href = "intent://profile/philipp-markert#Intent;scheme=https;package=com.linkedin.android;end";
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                window.location.href = "linkedin://profile/philipp-markert";
+            } else {
+                window.open("https://www.linkedin.com/in/philipp-markert", "_blank");
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
