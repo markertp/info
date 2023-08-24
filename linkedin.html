@@ -49,15 +49,6 @@
     </style>
 </head>
 <body>
-    <div class="content">
-        <p class="intro-text">If you have the LinkedIn app installed, it should open automatically.</p>
-        <p class="intro-text">If not, you can use the button below:</p>
-        <button class="linkedin-button" onclick="window.location.href = 'https://www.linkedin.com/in/philipp-markert'">
-            <i class="fab fa-linkedin-in" style="padding-right: 3vw"></i>
-            Open LinkedIn Profile
-        </button>
-    </div>
-
     <script>
         function openLinkedInProfile() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
@@ -73,5 +64,13 @@
 
         openLinkedInProfile();
     </script>
+    <div class="content">
+        <p class="intro-text">If you have the LinkedIn app installed, it should open automatically.</p>
+        <p class="intro-text">If not, you can use the button below:</p>
+        <button class="linkedin-button" onclick="window.location.href = 'https://www.linkedin.com/in/philipp-markert'">
+            <i class="fab fa-linkedin-in" style="padding-right: 3vw"></i>
+            Open LinkedIn Profile
+        </button>
+    </div>
 </body>
 </html>
