@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>LinkedIn Profile</title>
+    <title>My LinkedIn Profile</title>
+    <style>
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
     <script>
-        window.onload = function() {
-            openLinkedInProfile();
-        };
         function openLinkedInProfile() {
-            // Prüfen, ob auf dem Gerät die LinkedIn-App installiert ist
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
             if (/android/i.test(userAgent)) {
-                window.location.href = "intent://www.linkedin.com/in/philipp-markert#Intent;scheme=https;package=com.linkedin.android;end";
+                window.location.href = "intent://https://www.linkedin.com/in/philipp-markert#Intent;scheme=https;package=com.linkedin.android;end";
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 window.location.href = "linkedin://profile/philipp-markert";
             } else {
-                window.open("https://www.linkedin.com/in/philipp-markert", "_blank");
+                window.location.href = "https://www.linkedin.com/in/philipp-markert";
             }
         }
+
+        // Execute the function directly when the page loads
+        openLinkedInProfile();
     </script>
-</head>
-<body>
+
+    <p>If you have the LinkedIn app installed, it should open automatically.</p>
+    <p>If not, you can use the button below:</p>
+    <button onclick="window.location.href = 'https://www.linkedin.com/in/philipp-markert'">
+        <img src="path-to-linkedin-logo.png" alt="LinkedIn Logo" class="social-icon"> Open LinkedIn Profile
+    </button>
 </body>
 </html>
