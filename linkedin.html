@@ -49,6 +49,17 @@
     </style>
 </head>
 <body>
+    <script>
+        function openLinkedInProfileNonMobile() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (!(/android/i.test(userAgent)) && !(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)) {
+                window.location.href = "https://www.linkedin.com/in/philipp-markert";
+            }
+        }
+
+        openLinkedInProfileNonMobile();
+    </script>
     <div class="content">
         <p class="intro-text">If you have the LinkedIn app installed, the profile should open automatically.</p>
         <p class="intro-text">If not, you can use the button below:</p>
@@ -65,8 +76,6 @@
                 window.location.href = "intent://www.linkedin.com/in/philipp-markert#Intent;scheme=https;package=com.linkedin.android;end";
             } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 window.location.href = "linkedin://profile/philipp-markert";
-            } else {
-                window.location.href = "https://www.linkedin.com/in/philipp-markert";
             }
         }
 
